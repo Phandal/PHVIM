@@ -1,28 +1,35 @@
-set smartindent
-set number
-set relativenumber
-set tabstop=2
-set shiftwidth=2
-set expandtab
-set mouse=a
 set clipboard=unnamedplus
-set nowrap
-set splitright
-set splitbelow
-set hidden
-set nobackup
-set nowritebackup
-set signcolumn=yes
-set ignorecase
-set hlsearch
-set incsearch
-set fillchars=eob:\ ,vert:│
-set laststatus=2
-set guioptions=aegit
-set guicursor=n-v-c-sm:block-blinkwait300-blinkon200-blinkoff150,i-ci-ve:ver25-blinkwait300-blinkon200-blinkoff150,r-cr-o:hor20
-set omnifunc=syntaxcomplete#Complete
 set completeopt=menuone,noselect,preview
+set cursorline
+set expandtab
+set fillchars=eob:\ ,vert:│
 set grepprg=rg\ --vimgrep
+set guicursor=n-v-c-sm:block-blinkwait300-blinkon200-blinkoff150,i-ci-ve:ver25-blinkwait300-blinkon200-blinkoff150,r-cr-o:hor20
+set guioptions=aegit
+set hidden
+set hlsearch
+set ignorecase
+set incsearch
+set laststatus=2
+set list
+set listchars+=eol:﬋,trail:∙
+set mouse=a
+set number
+set omnifunc=syntaxcomplete#Complete
+set relativenumber
+set shiftwidth=2
+set shortmess=filnxtToOFc
+set signcolumn=yes
+set smartindent
+set splitbelow
+set splitright
+set tabstop=2
+set updatetime=300
+
+set nobackup
+set nowrap
+
+let mapleader=" "
 
 syntax enable
 colorscheme nord
