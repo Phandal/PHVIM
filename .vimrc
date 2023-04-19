@@ -22,6 +22,7 @@ set guioptions=aegit
 set guicursor=n-v-c-sm:block-blinkwait300-blinkon200-blinkoff150,i-ci-ve:ver25-blinkwait300-blinkon200-blinkoff150,r-cr-o:hor20
 set omnifunc=syntaxcomplete#Complete
 set completeopt=menuone,noselect,preview
+set grepprg=rg\ --vimgrep
 
 syntax enable
 colorscheme nord
