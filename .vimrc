@@ -1,6 +1,5 @@
 set clipboard=unnamedplus
 set completeopt=menuone,noselect,preview
-set cursorline
 set expandtab
 set fillchars=eob:\ ,vert:│
 set grepprg=rg\ --vimgrep
@@ -11,8 +10,6 @@ set hlsearch
 set ignorecase
 set incsearch
 set laststatus=2
-set list
-set listchars+=eol:﬋,trail:∙
 set mouse=a
 set number
 set omnifunc=syntaxcomplete#Complete
