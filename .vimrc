@@ -1,5 +1,5 @@
 set clipboard=unnamedplus
-set completeopt=menuone,noselect,preview
+set completeopt=menuone,preview
 set expandtab
 set fillchars=eob:\ ,vert:│
 set grepprg=rg\ --vimgrep
@@ -21,6 +21,7 @@ set smartindent
 set splitbelow
 set splitright
 set tabstop=2
+set ttimeoutlen=50
 set updatetime=300
 
 set nobackup
@@ -34,3 +35,5 @@ colorscheme nord
 let g:netrw_banner = 0
 let g:netrw_liststyle = 3
 let g:netrw_winsize = 15
+
+nnoremap <leader>ff <CMD>FZF<CR>
