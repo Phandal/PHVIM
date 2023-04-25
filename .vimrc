@@ -37,3 +37,4 @@ let g:netrw_liststyle = 3
 let g:netrw_winsize = 15
 
 nnoremap <leader>ff <CMD>FZF<CR>
+nnoremap <C-n> <CMD>Lexplore<CR>
