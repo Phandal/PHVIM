@@ -24,7 +24,7 @@ set tabstop=2
 set ttimeoutlen=50
 set updatetime=300
 set list
-set listchars+=eol:󱞥,trail:·
+set listchars=tab:\ \ ,eol:󱞥,trail:·
 
 set nobackup
 set nowrap
