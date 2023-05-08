@@ -24,7 +24,7 @@ set tabstop=2
 set ttimeoutlen=50
 set updatetime=300
 set list
-set listchars+=eol:󱞥,trail:·
+set listchars=tab:\ \ ,eol:󱞥,trail:·
 
 set nobackup
 set nowrap
@@ -41,7 +41,22 @@ let g:netrw_winsize = 15
 nnoremap <leader>ff <CMD>FZF<CR>
 nnoremap <C-n> <CMD>Lexplore<CR>
 
+let g:fzf_colors =
+\ { 'fg':      ['fg', 'Normal'],
+  \ 'bg':      ['bg', 'Normal'],
+  \ 'hl':      ['fg', 'Comment'],
+  \ 'fg+':     ['fg', 'CursorLine', 'CursorColumn', 'Normal'],
+  \ 'bg+':     ['bg', 'CursorLine', 'CursorColumn'],
+  \ 'hl+':     ['fg', 'Statement'],
+  \ 'info':    ['fg', 'PreProc'],
+  \ 'border':  ['fg', 'Ignore'],
+  \ 'prompt':  ['fg', 'Conditional'],
+  \ 'pointer': ['fg', 'Exception'],
+  \ 'marker':  ['fg', 'Keyword'],
+  \ 'spinner': ['fg', 'Label'],
+  \ 'header':  ['fg', 'Comment'] }
+
 if has('mac')
-  colorscheme elflord
+  colorscheme koehler
   set rtp+=/opt/homebrew/opt/fzf
 endif
