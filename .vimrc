@@ -57,6 +57,7 @@ let g:fzf_colors =
   \ 'header':  ['fg', 'Comment'] }
 
 if has('mac')
-  colorscheme koehler
+  colorscheme industry
   set rtp+=/opt/homebrew/opt/fzf
+  runtime ftplugin/man.vim
 endif
