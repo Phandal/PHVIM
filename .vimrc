@@ -40,3 +40,8 @@ let g:netrw_winsize = 15
 
 nnoremap <leader>ff <CMD>FZF<CR>
 nnoremap <C-n> <CMD>Lexplore<CR>
+
+if has('mac')
+  colorscheme elflord
+  set rtp+=/opt/homebrew/opt/fzf
+endif
