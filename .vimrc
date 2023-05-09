@@ -38,7 +38,7 @@ let g:netrw_banner = 0
 let g:netrw_liststyle = 3
 let g:netrw_winsize = 15
 
-nnoremap <leader>ff <CMD>FZF<CR>
+nnoremap <leader>ff <CMD>FZF --preview bat\ --style=numbers\ --color=always\ --line-range\ :500\ {-1}<CR>
 nnoremap <C-n> <CMD>Lexplore<CR>
 
 let g:fzf_colors =
