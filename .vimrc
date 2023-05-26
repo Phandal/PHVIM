@@ -1,5 +1,6 @@
 set clipboard=unnamedplus
 set completeopt=menuone,preview
+set cursorline
 set expandtab
 set fillchars=eob:\ ,vert:│
 set grepprg=rg\ --vimgrep
@@ -32,6 +33,12 @@ set nowrap
 let mapleader=" "
 
 syntax enable
+
+let g:nord_bold = 1
+let g:nord_italic = 1
+let g:nord_italic_comments = 1
+let g:nord_cursor_line_number_background = 1
+let g:nord_underline = 1
 colorscheme nord
 
 let g:netrw_banner = 0
