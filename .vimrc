@@ -14,6 +14,7 @@ set laststatus=2
 set mouse=a
 set number
 set omnifunc=syntaxcomplete#Complete
+set regexpengine=0
 set relativenumber
 set shiftwidth=2
 set shortmess=filnxtToOFc
@@ -33,6 +34,7 @@ set nowrap
 let mapleader=" "
 
 syntax enable
+filetype plugin indent on
 
 let g:nord_bold = 1
 let g:nord_italic = 1
@@ -64,7 +66,9 @@ let g:fzf_colors =
   \ 'header':  ['fg', 'Comment'] }
 
 if has('mac')
-  colorscheme industry
+  let g:nord_italic_comments = 0
   set rtp+=/opt/homebrew/opt/fzf
   runtime ftplugin/man.vim
+  colorscheme habamax
 endif
+
