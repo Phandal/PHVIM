@@ -1,3 +1,4 @@
+" Turning Things On
 set clipboard=unnamedplus
 set completeopt=menuone,preview
 set cursorline
@@ -32,14 +33,16 @@ set wildmenu
 set wildoptions=fuzzy,pum
 set wildignorecase
 
+" Turning Things Off
 set nobackup
 set nowrap
 
+" Settings
 let mapleader=" "
-
 syntax enable
 filetype plugin indent on
 
+" Color Scheme Specific
 let g:nord_bold = 1
 let g:nord_italic = 1
 let g:nord_italic_comments = 1
@@ -47,13 +50,16 @@ let g:nord_cursor_line_number_background = 1
 let g:nord_underline = 1
 colorscheme nord
 
+" File Browser Specific
 let g:netrw_banner = 0
 let g:netrw_liststyle = 3
 let g:netrw_winsize = 15
 
+" KeyMaps
 nnoremap <leader>ff <CMD>FZF --preview bat\ --style=numbers\ --color=always\ --line-range\ :500\ {-1}<CR>
 nnoremap <C-n> <CMD>Lexplore<CR>
 
+" FZF Settings
 let g:fzf_colors =
 \ { 'fg':      ['fg', 'Normal'],
   \ 'bg':      ['bg', 'Normal'],
@@ -69,10 +75,36 @@ let g:fzf_colors =
   \ 'spinner': ['fg', 'Label'],
   \ 'header':  ['fg', 'Comment'] }
 
+" Mac Specific
 if has('mac')
   let g:nord_italic_comments = 0
   set rtp+=/opt/homebrew/opt/fzf
   runtime ftplugin/man.vim
   colorscheme habamax
 endif
+
+" Status Line
+function! GitBranch()
+  return system("git rev-parse --abbrev-ref HEAD 2>/dev/null | tr -d '\n'")
+endfunction
+
+function! StatuslineGit()
+  let l:branchname = GitBranch()
+  return strlen(l:branchname) > 0?'  '.l:branchname.' ':''
+endfunction
+
+set statusline=
+set statusline+=%#StatusLine#
+" set statusline+=%{mode()}
+set statusline+=%{StatuslineGit()}
+set statusline+=%#StatusLineNC#
+set statusline+=\ %f
+set statusline+=%m
+set statusline+=%=
+set statusline+=%#StatusLine#
+set statusline+=\ %y
+set statusline+=\ %{&fileencoding?&fileencoding:&encoding}
+set statusline+=\ [%{&fileformat}\]
+set statusline+=\ %p%%
+set statusline+=\ %l:%c
 
