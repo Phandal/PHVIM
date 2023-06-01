@@ -11,9 +11,12 @@ set hlsearch
 set ignorecase
 set incsearch
 set laststatus=2
+set list
+set listchars=tab:\ \ ,eol:󱞥,trail:·
 set mouse=a
 set number
 set omnifunc=syntaxcomplete#Complete
+set path+=**
 set regexpengine=0
 set relativenumber
 set shiftwidth=2
@@ -25,8 +28,9 @@ set splitright
 set tabstop=2
 set ttimeoutlen=50
 set updatetime=300
-set list
-set listchars=tab:\ \ ,eol:󱞥,trail:·
+set wildmenu
+set wildoptions=fuzzy,pum
+set wildignorecase
 
 set nobackup
 set nowrap
