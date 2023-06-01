@@ -66,20 +66,26 @@ function SwapBackground()
 endfunction
 
 function StatusLineMode()
-  let statusline_mode_map = {
-    \ 'n'      : 'NORMAL',
-    \ 'i'      : 'INSERT',
-    \ 'R'      : 'REPLACE',
-    \ 'v'      : 'VISUAL',
-    \ 'V'      : 'V-LINE',
-    \ "\<C-v>" : 'V-BLOCK',
-    \ 'c'      : 'COMMAND',
-    \ 's'      : 'SELECT',
-    \ 'S'      : 'S-LINE',
-    \ "\<C-s>" : 'S-BLOCK',
-    \ 't'      : 'TERMINAL'
-    \ }
-  return get(statusline_mode_map, mode())
+  if &filetype ==# 'netrw'
+    return 'NETRW'
+  elseif &filetype ==# 'help'
+    return 'HELP'
+  else
+    let statusline_mode_map = {
+      \ 'n'      : 'NORMAL',
+      \ 'i'      : 'INSERT',
+      \ 'R'      : 'REPLACE',
+      \ 'v'      : 'VISUAL',
+      \ 'V'      : 'V-LINE',
+      \ "\<C-v>" : 'V-BLOCK',
+      \ 'c'      : 'COMMAND',
+      \ 's'      : 'SELECT',
+      \ 'S'      : 'S-LINE',
+      \ "\<C-s>" : 'S-BLOCK',
+      \ 't'      : 'TERMINAL'
+      \ }
+    return get(statusline_mode_map, mode())
+  endif
 endfunction
 
 
