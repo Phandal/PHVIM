@@ -54,10 +54,29 @@ colorscheme nord
 let g:netrw_banner = 0
 let g:netrw_liststyle = 3
 let g:netrw_winsize = 15
+"
+" Functions
+function! SwapBackground()
+  if &background ==# "dark"
+    let &background="light"
+  else
+    let &background="dark"
+  endif
+endfunction
+
+function! GitBranch()
+  return system("git rev-parse --abbrev-ref HEAD 2>/dev/null | tr -d '\n'")
+endfunction
+
+function! StatuslineGit()
+  let l:branchname = GitBranch()
+  return strlen(l:branchname) > 0?'  '.l:branchname.' ':''
+endfunction
 
 " KeyMaps
 nnoremap <leader>ff <CMD>FZF --preview bat\ --style=numbers\ --color=always\ --line-range\ :500\ {-1}<CR>
 nnoremap <C-n> <CMD>Lexplore<CR>
+nnoremap <f5> <CMD>call SwapBackground()<CR>
 
 " FZF Settings
 let g:fzf_colors =
@@ -84,15 +103,6 @@ if has('mac')
 endif
 
 " Status Line
-function! GitBranch()
-  return system("git rev-parse --abbrev-ref HEAD 2>/dev/null | tr -d '\n'")
-endfunction
-
-function! StatuslineGit()
-  let l:branchname = GitBranch()
-  return strlen(l:branchname) > 0?'  '.l:branchname.' ':''
-endfunction
-
 set statusline=
 set statusline+=%#StatusLine#
 " set statusline+=%{mode()}
