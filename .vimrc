@@ -35,6 +35,7 @@ set wildignorecase
 
 " Turning Things Off
 set nobackup
+set noshowmode
 set nowrap
 
 " Settings
@@ -56,19 +57,37 @@ let g:netrw_liststyle = 3
 let g:netrw_winsize = 15
 "
 " Functions
-function! SwapBackground()
-  if &background ==# "dark"
+function SwapBackground()
+  if &background == "dark"
     let &background="light"
   else
     let &background="dark"
   endif
 endfunction
 
-function! GitBranch()
+function StatusLineMode()
+  let statusline_mode_map = {
+    \ 'n'      : 'NORMAL',
+    \ 'i'      : 'INSERT',
+    \ 'R'      : 'REPLACE',
+    \ 'v'      : 'VISUAL',
+    \ 'V'      : 'V-LINE',
+    \ "\<C-v>" : 'V-BLOCK',
+    \ 'c'      : 'COMMAND',
+    \ 's'      : 'SELECT',
+    \ 'S'      : 'S-LINE',
+    \ "\<C-s>" : 'S-BLOCK',
+    \ 't'      : 'TERMINAL'
+    \ }
+  return get(statusline_mode_map, mode())
+endfunction
+
+
+function GitBranch()
   return system("git rev-parse --abbrev-ref HEAD 2>/dev/null | tr -d '\n'")
 endfunction
 
-function! StatuslineGit()
+function StatuslineGit()
   let l:branchname = GitBranch()
   return strlen(l:branchname) > 0?'  '.l:branchname.' ':''
 endfunction
@@ -104,8 +123,9 @@ endif
 
 " Status Line
 set statusline=
+set statusline+=%#Search#
+set statusline+=\ %{StatusLineMode()}\ 
 set statusline+=%#StatusLine#
-" set statusline+=%{mode()}
 set statusline+=%{StatuslineGit()}
 set statusline+=%#StatusLineNC#
 set statusline+=\ %f
