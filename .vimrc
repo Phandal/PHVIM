@@ -88,16 +88,6 @@ function StatusLineMode()
   endif
 endfunction
 
-
-function GitBranch()
-  return system("git rev-parse --abbrev-ref HEAD 2>/dev/null | tr -d '\n'")
-endfunction
-
-function StatuslineGit()
-  let l:branchname = GitBranch()
-  return strlen(l:branchname) > 0?' '.l:branchname.' ':''
-endfunction
-
 " KeyMaps
 nnoremap <leader>ff <CMD>FZF --preview bat\ --style=numbers\ --color=always\ --line-range\ :500\ {-1}<CR>
 nnoremap <C-n> <CMD>Lexplore<CR>
@@ -129,10 +119,9 @@ endif
 
 " Status Line
 set statusline=
-set statusline+=%#Search#
-set statusline+=\ %{StatusLineMode()}\ 
+" set statusline+=%#Search#
 set statusline+=%#StatusLine#
-set statusline+=%{StatuslineGit()}
+set statusline+=\ %{StatusLineMode()}\ 
 set statusline+=%#StatusLineNC#
 set statusline+=\ %f
 set statusline+=%m
