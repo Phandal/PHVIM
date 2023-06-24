@@ -115,6 +115,7 @@ if has('mac')
   set rtp+=/opt/homebrew/opt/fzf
   runtime ftplugin/man.vim
   colorscheme habamax
+  set clipboard=unnamed
 endif
 
 " Status Line
