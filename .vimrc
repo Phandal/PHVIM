@@ -94,6 +94,7 @@ nnoremap <C-n> <CMD>Lexplore<CR>
 nnoremap <f5> <CMD>call SwapBackground()<CR>
 
 " FZF Settings
+let g:fzf_layout = { 'window': { 'width': 1.0, 'height': 0.4, 'yoffset': 1.0 } }
 let g:fzf_colors =
 \ { 'fg':      ['fg', 'Normal'],
   \ 'bg':      ['bg', 'Normal'],
