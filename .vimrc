@@ -23,6 +23,7 @@ set relativenumber
 set shiftwidth=2
 set shortmess=filnxtToOFc
 set signcolumn=yes
+set smartcase
 set smartindent
 set splitbelow
 set splitright
