@@ -94,6 +94,10 @@ nnoremap <leader>ff <CMD>FZF --preview bat\ --style=numbers\ --color=always\ --l
 nnoremap <C-n> <CMD>Lexplore<CR>
 nnoremap <f5> <CMD>call SwapBackground()<CR>
 
+" Commands
+command SDFPreview !suitecloud project:deploy --dryrun
+command SDFDeploy !suitecloud project:deploy
+
 " FZF Settings
 let g:fzf_layout = { 'window': { 'width': 1.0, 'height': 0.4, 'yoffset': 1.0 } }
 let g:fzf_colors =
