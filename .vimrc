@@ -122,7 +122,7 @@ if has('mac')
   let g:nord_italic_comments = 0
   set rtp+=/opt/homebrew/opt/fzf
   runtime ftplugin/man.vim
-  colorscheme habamax
+  colorscheme gruvbox
   set clipboard=unnamed
 endif
 
