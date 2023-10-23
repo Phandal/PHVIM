@@ -1,4 +1,5 @@
 " Turning Things On
+set autowrite
 set clipboard=unnamedplus
 set completeopt=menuone,preview
 set cursorline
