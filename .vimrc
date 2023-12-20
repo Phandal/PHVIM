@@ -1,3 +1,6 @@
+" Make sure the defaults loaded
+source $VIMRUNTIME/defaults.vim
+
 " Turning Things On
 set autowrite
 set background=dark
