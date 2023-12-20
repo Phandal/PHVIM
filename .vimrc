@@ -100,6 +100,8 @@ nnoremap <f5> <CMD>call SwapBackground()<CR>
 command SDFPreview !suitecloud project:deploy --dryrun
 command SDFDeploy !suitecloud project:deploy
 
+" AutoCommands
+
 " FZF Settings
 let g:fzf_layout = { 'window': { 'width': 1.0, 'height': 0.4, 'yoffset': 1.0 } }
 if g:colors_name !=# 'gruvbox'
