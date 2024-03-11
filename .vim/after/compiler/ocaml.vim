@@ -27,7 +27,7 @@ let current_compiler = "ocaml"
 let s:cpo_save = &cpo
 set cpo&vim
 
-CompilerSet makeprg=dune\ build
+CompilerSet makeprg=dune
 CompilerSet errorformat =
       \%EFile\ \"%f\"\\,\ lines\ %*\\d-%l\\,\ characters\ %c-%*\\d:,
       \%EFile\ \"%f\"\\,\ line\ %l\\,\ characters\ %c-%*\\d:,
