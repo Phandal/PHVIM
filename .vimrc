@@ -55,7 +55,7 @@ let g:nord_italic = 1
 let g:nord_italic_comments = 1
 let g:nord_cursor_line_number_background = 1
 let g:nord_underline = 1
-colorscheme gruvbox
+colorscheme nord
 
 " File Browser Specific
 let g:netrw_banner = 0
