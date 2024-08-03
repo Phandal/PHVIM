@@ -133,18 +133,17 @@ if has('mac')
 endif
 
 " Status Line
-set statusline=
-" set statusline+=%#Search#
-set statusline+=%#StatusLine#
-set statusline+=\ %{StatusLineMode()}\ 
-set statusline+=%#StatusLineNC#
-set statusline+=\ %f
-set statusline+=%m
-set statusline+=%=
-set statusline+=%#StatusLine#
-set statusline+=\ %y
-set statusline+=\ %{&fileencoding?&fileencoding:&encoding}
-set statusline+=\ [%{&fileformat}\]
-set statusline+=\ %p%%
-set statusline+=\ %l:%c
+"set statusline=
+"set statusline+=%#StatusLine#
+"set statusline+=\ %{StatusLineMode()}\ 
+"set statusline+=%#StatusLineNC#
+"set statusline+=\ %f
+"set statusline+=%m
+"set statusline+=%=
+"set statusline+=%#StatusLine#
+"set statusline+=\ %y
+"set statusline+=\ %{&fileencoding?&fileencoding:&encoding}
+"set statusline+=\ [%{&fileformat}\]
+"set statusline+=\ %p%%
+"set statusline+=\ %l:%c
 
