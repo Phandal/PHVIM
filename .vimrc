@@ -33,6 +33,7 @@ set smartindent
 set splitbelow
 set splitright
 set tabstop=2
+set termguicolors
 set ttimeoutlen=50
 set updatetime=300
 set wildmenu
@@ -55,7 +56,7 @@ let g:nord_italic = 1
 let g:nord_italic_comments = 1
 let g:nord_cursor_line_number_background = 1
 let g:nord_underline = 1
-colorscheme gruvbox
+colorscheme everforest
 
 " File Browser Specific
 let g:netrw_banner = 0
