@@ -95,9 +95,12 @@ function StatusLineMode()
 endfunction
 
 " KeyMaps
-nnoremap <leader>ff <CMD>FZF --preview bat\ --style=numbers\ --color=always\ --line-range\ :500\ {-1}<CR>
+" nnoremap <leader>ff <CMD>FZF --preview bat\ --style=numbers\ --color=always\ --line-range\ :500\ {-1}<CR>
 nnoremap <C-n> <CMD>Lexplore<CR>
 nnoremap <f5> <CMD>call SwapBackground()<CR>
+nnoremap <Leader>ff <CMD>Files<CR>
+nnoremap <Leader>fb <CMD>Buffers<CR>
+nnoremap <Leader>fh <CMD>Help<CR>
 
 " Commands
 command SDFPreview !suitecloud project:deploy --dryrun
