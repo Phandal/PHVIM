@@ -3,6 +3,7 @@ source $VIMRUNTIME/defaults.vim
 
 " Turning Things On
 set autowrite
+set autoread
 set background=dark
 set clipboard=unnamedplus
 set completeopt=menuone,preview
@@ -95,16 +96,15 @@ function StatusLineMode()
 endfunction
 
 " KeyMaps
-" nnoremap <leader>ff <CMD>FZF --preview bat\ --style=numbers\ --color=always\ --line-range\ :500\ {-1}<CR>
 nnoremap <C-n> <CMD>20Lexplore<CR>
 nnoremap <f5> <CMD>call SwapBackground()<CR>
 nnoremap <Leader>ff <CMD>Files<CR>
 nnoremap <Leader>fb <CMD>Buffers<CR>
 nnoremap <Leader>fh <CMD>Help<CR>
+nnoremap <Leader>j <CMD>cnext<CR>
+nnoremap <Leader>k <CMD>cprev<CR>
 
 " Commands
-command SDFPreview !suitecloud project:deploy --dryrun
-command SDFDeploy !suitecloud project:deploy
 
 " AutoCommands
 
