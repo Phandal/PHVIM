@@ -96,7 +96,7 @@ endfunction
 
 " KeyMaps
 " nnoremap <leader>ff <CMD>FZF --preview bat\ --style=numbers\ --color=always\ --line-range\ :500\ {-1}<CR>
-nnoremap <C-n> <CMD>Lexplore<CR>
+nnoremap <C-n> <CMD>20Lexplore<CR>
 nnoremap <f5> <CMD>call SwapBackground()<CR>
 nnoremap <Leader>ff <CMD>Files<CR>
 nnoremap <Leader>fb <CMD>Buffers<CR>
@@ -134,19 +134,4 @@ if has('mac')
   runtime ftplugin/man.vim
   set clipboard=unnamed
 endif
-
-" Status Line
-"set statusline=
-"set statusline+=%#StatusLine#
-"set statusline+=\ %{StatusLineMode()}\ 
-"set statusline+=%#StatusLineNC#
-"set statusline+=\ %f
-"set statusline+=%m
-"set statusline+=%=
-"set statusline+=%#StatusLine#
-"set statusline+=\ %y
-"set statusline+=\ %{&fileencoding?&fileencoding:&encoding}
-"set statusline+=\ [%{&fileformat}\]
-"set statusline+=\ %p%%
-"set statusline+=\ %l:%c
 
